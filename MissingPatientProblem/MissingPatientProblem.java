@@ -84,10 +84,7 @@ public class MissingPatientProblem {
     public static int getMissingPatient(int[] array, int low, int high) {
 
         if (low >= high) {
-            if ((high - low == 0) || (array[low] == array.length + 1))
-                return array[low] - 1;
-            else
-                return array[low] + 1;
+            return array[low] - 1;
         }
 
         int[] avg = getAverage(array, low, high); // avg[0] = avgIndex, avg[1] = avg value
